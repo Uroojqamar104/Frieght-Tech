@@ -1,0 +1,65 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+@*<link rel="manifest" href="/manifest.json">*@
+
+<script src="~/Scripts/libs/jquery/jquery-3.3.1.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script>
+    var config = {
+        apiKey: "AIzaSyCNJIwG8RNMv3pV6OnmKQd0C2lazWHLSPE",
+        authDomain: "testserviceworker-d8dc2.firebaseapp.com",
+        messagingSenderId: "727606063374",
+    };
+    firebase.initializeApp(config);
+</script>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TestNoti</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="message" />
+        <button id="send">Send</button>
+    </div>
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+
+        $('#send').click(function () {
+            SendNoti();
+        });
+
+    });
+
+    function SendNoti() {
+        var token = 'f9xbspRGKb8:APA91bGoIH8NWZ1j_g9fC6IZkalu57w4gxMbhX3uD03AcuVaWXC0z4ErkYphntueGez84kTlvebLvxghwl8mF8aOUQiNtAVsZrVM8sKVwc6dS_D2qEVYlOeiSxdpraQfQ6e7rrS5U-JB';
+        var apiUrl = '/Account/SendNoti';
+        $.ajax({
+            url: apiUrl,
+            type: 'GET',
+            //cache: true,
+            data: { token: token, message: $('#message').val() },
+            dataType: 'json',
+            success: function (json) {
+                if (json.status) {
+                } else {
+                }
+            },
+            error: function (xmlHttpRequest, textStatus, errorThrown) {
+                console.log('some error occured', textStatus, errorThrown);
+            },
+            always: function () {
+            }
+        });
+
+    }
+</script>

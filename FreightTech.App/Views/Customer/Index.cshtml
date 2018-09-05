@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string baseUrl = Request.Url.AbsoluteUri.ToLowerInvariant().Contains("localhost") ? "" : "/app";
+}
+
+<div id="main-content">
+
+    <div id="div-main" class="container-fluid">
+        <div class="dashboard-section">
+            <div class="section-heading clearfix">
+                <h2 class="section-title">Customers</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- ko foreach: customersArray -->
+                            <tr>
+                                <td data-bind="text: FirstName"></td>
+                                <td data-bind="text: LastName"></td>
+                                <td data-bind="text: EmailId"></td>
+                                <td><a class="btn btn-default" data-bind="click: $root.delete" href="javascript:void(0);">Delete</a></td>
+                            </tr>
+                            <!-- /ko -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="@baseUrl/Scripts/libs/requirejs/require.js"
+        data-main="@baseUrl/Scripts/app/modules/search-customer.js"></script>
+

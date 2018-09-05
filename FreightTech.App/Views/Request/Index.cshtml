@@ -1,0 +1,62 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string baseUrl = Request.Url.AbsoluteUri.ToLowerInvariant().Contains("localhost") ? "" : "/app";
+}
+
+<div id="main-content">
+
+    <div id="mooo" class="container-fluid">
+        <div class="dashboard-section">
+            <div class="section-heading clearfix">
+                <h2 class="section-title">REQUESTS</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+
+                                <th>Email</th>
+                                <th>Vehicle</th>
+                                <th>Contact</th>
+                                <th>Actions</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <!-- ko foreach: driversArray1 -->
+                            <tr>
+                                <td data-bind="text: driver.FirstName"></td>
+
+                                <td data-bind="text: driver.EmailId"></td>
+                                <td data-bind="text: detail.VehicleNumber"></td>
+                                <td data-bind="text: detail.Contact"></td>
+
+                                <td><a class="btn btn-default" data-bind="click: $root.approveDriver" href="javascript:void(0)">Approve</a></td>
+                                @*<td><a class="btn btn-default" data-bind="" target="_blank">Delete</a></td>*@
+                            </tr>
+                            <!-- /ko -->
+                            <!-- ko if: driversArray1().length == 0 -->
+                            <tr>
+                                <td colspan="5">
+                                    No records found.
+                                </td>
+                            </tr>
+                            <!-- /ko-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<script type="text/javascript" src="@baseUrl/Scripts/libs/requirejs/require.js"
+        data-main="@baseUrl/Scripts/app/modules/requests.js"></script>
+

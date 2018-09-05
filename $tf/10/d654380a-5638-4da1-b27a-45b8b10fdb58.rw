@@ -1,0 +1,5 @@
+.from{
+	display: block;
+	text-align: center;
+	align-content:center;
+}

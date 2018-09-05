@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreightTech", "FreightTech\FreightTech.csproj", "{D4B8CBCD-ABE1-467E-A535-5DF2F23186EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreightTech.App", "FreightTech.App\FreightTech.App.csproj", "{29233174-7BB2-41D2-A103-5993F9A36122}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2B170886-BE95-4206-B319-9A2F5A2567A3} = {2B170886-BE95-4206-B319-9A2F5A2567A3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreightTech.Data", "FreightTech.Data\FreightTech.Data.csproj", "{2B170886-BE95-4206-B319-9A2F5A2567A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreightTech.Api", "FreightTech.Api\FreightTech.Api.csproj", "{5D1E1CC7-2301-42D6-BC7A-A71D5B1E30F5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2B170886-BE95-4206-B319-9A2F5A2567A3} = {2B170886-BE95-4206-B319-9A2F5A2567A3}
+	EndProjectSection
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FreightTech.Database", "FreightTech.Database\FreightTech.Database.sqlproj", "{E8924243-FAAD-4F90-9DD9-2FCB66D8E4FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4B8CBCD-ABE1-467E-A535-5DF2F23186EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B8CBCD-ABE1-467E-A535-5DF2F23186EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B8CBCD-ABE1-467E-A535-5DF2F23186EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4B8CBCD-ABE1-467E-A535-5DF2F23186EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29233174-7BB2-41D2-A103-5993F9A36122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29233174-7BB2-41D2-A103-5993F9A36122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29233174-7BB2-41D2-A103-5993F9A36122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29233174-7BB2-41D2-A103-5993F9A36122}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B170886-BE95-4206-B319-9A2F5A2567A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B170886-BE95-4206-B319-9A2F5A2567A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B170886-BE95-4206-B319-9A2F5A2567A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B170886-BE95-4206-B319-9A2F5A2567A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D1E1CC7-2301-42D6-BC7A-A71D5B1E30F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D1E1CC7-2301-42D6-BC7A-A71D5B1E30F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D1E1CC7-2301-42D6-BC7A-A71D5B1E30F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D1E1CC7-2301-42D6-BC7A-A71D5B1E30F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8924243-FAAD-4F90-9DD9-2FCB66D8E4FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8924243-FAAD-4F90-9DD9-2FCB66D8E4FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8924243-FAAD-4F90-9DD9-2FCB66D8E4FB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E8924243-FAAD-4F90-9DD9-2FCB66D8E4FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8924243-FAAD-4F90-9DD9-2FCB66D8E4FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8924243-FAAD-4F90-9DD9-2FCB66D8E4FB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6342531-E729-4897-A99B-EFE3C0A19FE0}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://uj104.visualstudio.com/
+		SccProjectUniqueName0 = FreightTech\\FreightTech.csproj
+		SccProjectName0 = FreightTech
+		SccAuxPath0 = https://yakhtar.visualstudio.com
+		SccLocalPath0 = FreightTech
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = FreightTech.Api\\FreightTech.Api.csproj
+		SccProjectName2 = FreightTech.Api
+		SccLocalPath2 = FreightTech.Api
+		SccProjectUniqueName3 = FreightTech.App\\FreightTech.App.csproj
+		SccProjectName3 = FreightTech.App
+		SccLocalPath3 = FreightTech.App
+		SccProjectUniqueName4 = FreightTech.Data\\FreightTech.Data.csproj
+		SccProjectName4 = FreightTech.Data
+		SccLocalPath4 = FreightTech.Data
+		SccProjectUniqueName5 = FreightTech.Database\\FreightTech.Database.sqlproj
+		SccProjectName5 = FreightTech.Database
+		SccLocalPath5 = FreightTech.Database
+	EndGlobalSection
+EndGlobal

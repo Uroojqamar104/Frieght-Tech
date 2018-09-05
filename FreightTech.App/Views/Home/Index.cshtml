@@ -1,0 +1,86 @@
+﻿@{
+    //ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string baseUrl = Request.Url.AbsoluteUri.ToLowerInvariant().Contains("localhost") ? "" : "/app";
+}
+<style>
+    .map {
+        height: 400px;
+        width: 97%;
+        margin-left: 2%;
+    }
+</style>
+<div id="main-content">
+    <div class="container-fluid">
+        <h1 class="sr-only">Dashboard</h1>
+        <!-- WEBSITE ANALYTICS -->
+        <div class="dashboard-section">
+
+            <div class="panel-content" id="app-stats">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="number-chart">
+                            <div class="number"><span data-bind="text: totalFeedbackCount">0</span> <span>MESSAGES</span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="number-chart">
+                            <div class="number"><span data-bind="text: pendingOrdersCount">0</span> <span>TRACKING</span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="number-chart">
+                            <div class="number"><span data-bind="text: completedOrdersCount">0</span> <span>DELIVERIES</span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="number-chart">
+                            <div class="number"><span data-bind="text: pendingDriversCount">0</span> <span>REQUESTS</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-section">
+            <div class="section-heading clearfix">
+                <h2 class="section-title">Regions</h2>
+                @*<a href="#" class="right">View Sales Reports</a>*@
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="map">
+                        <div id="map" class="map"></div>
+                        <!--    <img src="/w3images/region.jpg" style="width:100%" alt="Google Regional Map"> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="@baseUrl/Scripts/libs/requirejs/require.js"
+        data-main="@baseUrl/Scripts/app/modules/dashboard.js"></script>
+
+
+
+<script>
+
+    function initMap() {
+        var uluru = { lat: 25.136581, lng: 67.394259 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 8,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFiB41Vxt09EgQKkUj35h2DWq30SZ8vxM&callback=initMap">
+</script>

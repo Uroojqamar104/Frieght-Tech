@@ -1,0 +1,52 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main-content">
+
+    <div id="div-main" class="container-fluid">
+        <div class="dashboard-section">
+            <div class="section-heading clearfix">
+                <h2 class="section-title">Orders</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>NAME</th>
+
+                                <th>PICKUP POINT</th>
+                                <th>DROPOFF POINT</th>
+                                <th>STATUS</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- ko foreach:OrderArray -->
+                            <tr>
+                                <td data-bind="text: user.FirstName +' '+user.LastName"></td>
+
+                                <td data-bind="text: detail.PickupLocation"></td>
+                                <td data-bind="text: detail.DropoffLocation"></td>
+                              
+                                <td data-bind="text: $root.geStatusName(detail.StatusId)"></td>
+
+
+                            </tr>
+                            <!-- /ko -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="~/Scripts/libs/requirejs/require.js"
+        data-main="/Scripts/app/modules/Orders.js"></script>
+

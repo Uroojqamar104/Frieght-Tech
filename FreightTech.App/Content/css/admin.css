@@ -1,0 +1,23 @@
+
+
+      .map {
+        height: 400px;
+        width: 97%;
+        margin-left: 2%;
+       }
+   
+   .w3-bar .w3-bar-item {
+    padding: 5px 20px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0;
+}
+.slogan{
+	font-family: "comic sans Ms",serif;
+	    padding-top: 17px!important;
+    font-size: 25px!important;
+    color: #27f1e1fc!important;
+
+}

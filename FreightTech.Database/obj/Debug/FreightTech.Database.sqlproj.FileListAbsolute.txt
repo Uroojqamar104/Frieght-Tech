@@ -1,0 +1,10 @@
+D:\FreightTech\FreightTech.Database\bin\Debug\FreightTech.Database.dacpac
+D:\FreightTech\FreightTech.Database\bin\Debug\FreightTech.Database.dll
+D:\FreightTech\FreightTech.Database\bin\Debug\FreightTech.Database.pdb
+D:\FreightTech\FreightTech.Database\obj\Debug\FreightTech.Database.sqlprojAssemblyReference.cache
+D:\FreightTech\FreightTech.Database\obj\Debug\Model.xml
+D:\FreightTech\FreightTech.Database\obj\Debug\refactor.xml
+D:\FreightTech\FreightTech.Database\obj\Debug\postdeploy.sql
+D:\FreightTech\FreightTech.Database\obj\Debug\predeploy.sql
+D:\FreightTech\FreightTech.Database\obj\Debug\FreightTech.Database.dll
+D:\FreightTech\FreightTech.Database\obj\Debug\FreightTech.Database.pdb

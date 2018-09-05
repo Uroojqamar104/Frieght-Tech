@@ -1,0 +1,47 @@
+
+
+      .map {
+        height: 400px;
+        width: 97%;
+        margin-left: 2%;
+       }
+   
+   .w3-bar .w3-bar-item {
+    padding: 5px 20px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0;
+}
+.slogan{
+	font-family: "comic sans Ms",serif;
+	    padding-top: 17px!important;
+    font-size: 25px!important;
+    color: #27f1e1fc!important;
+
+}
+
+img.profile 
+{
+	 width: 46px!important; 
+	 margin-left:100px!important;
+	  padding-bottom:10px!important; 
+	}
+
+	 
+ body.modal-open {
+  overflow: hidden;
+}
+col-md-8.coo{
+	padding-bottom: 20px;
+}
+
+
+/*********/
+
+/*#urooj{
+	background : red;
+	border : 1px solid black;
+	padding-bottom: 20px;
+}*/

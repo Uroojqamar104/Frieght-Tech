@@ -1,0 +1,55 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string baseUrl = Request.Url.AbsoluteUri.ToLowerInvariant().Contains("localhost") ? "" : "/app";
+}
+
+<div id="main-content">
+
+    <div id="div-main" class="container-fluid">
+        <div class="dashboard-section">
+            <div class="section-heading clearfix">
+                <h2 class="section-title">Active Orders</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Pickup Location</th>
+                                <th>Drop off Location</th>
+                                <th>Load Type</th>
+                                <th>Commodity</th>
+                                <th>Weight</th>
+                                <th>Customer</th>
+                                <th>Driver</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <!-- ko foreach: ordersArray -->
+                            <tr>
+                                <td data-bind="text: order.PickupLocation"></td>
+                                <td data-bind="text: order.DropoffLocation"></td>
+                                <td data-bind="text: order.LoadType"></td>
+                                <td data-bind="text: order.Commodity"></td>
+                                <td data-bind="text: order.Weight"></td>
+                                <td data-bind="text: customer.FirstName + '' + customer.LastName"></td>
+                                <td data-bind="text: driver.FirstName + '' + driver.LastName"></td>
+                                <td><a class="btn btn-default" data-bind="attr: { href: $root.trackingUrl() + driverDetails.DriverId }" target="_blank">Track</a></td>
+                            </tr>
+                            <!-- /ko -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript" src="@baseUrl/Scripts/libs/requirejs/require.js"
+            data-main="@baseUrl/Scripts/app/modules/track-orders.js"></script>
+
+</div>
+
+
